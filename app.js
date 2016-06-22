@@ -30,7 +30,7 @@ app.use(settings.httpAdminRoot,RED.httpAdmin);
 // Serve the http nodes UI from /api
 app.use(settings.httpNodeRoot,RED.httpNode);
 
-server.listen(settings['uiPort'] || 1880);
+server.listen(settings['uiPort'] || 8080);
 
 // Start the runtime
 RED.start();
