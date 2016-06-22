@@ -17,7 +17,7 @@ var settings = {
 	nodesDir: "/Users/allomov/work/altoros/node-red/app/nodes",
     httpAdminRoot:"/",
     httpNodeRoot: "/api",
-    uiPort: process.env.PORT,
+    uiPort: 8080,
     functionGlobalContext: { }    // enables global context
 };
 
@@ -30,7 +30,7 @@ app.use(settings.httpAdminRoot,RED.httpAdmin);
 // Serve the http nodes UI from /api
 app.use(settings.httpNodeRoot,RED.httpNode);
 
-server.listen(settings['uiPort'] || 8080);
+server.listen(8080);
 
 // Start the runtime
 RED.start();
